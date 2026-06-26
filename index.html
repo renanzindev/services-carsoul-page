@@ -1,17 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CarSoul</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Security Headers -->
+    <!-- CSP será configurado no servidor em produção. Para desenvolvimento, comentado para permitir hot-reload do Vite -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' ws: wss:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" /> -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    
+    <title>CarSoul - Proteção Premium Para Seu Veículo</title>
     <meta name="description" content="Serviços automotivos premium: PPF, Insulfilm e Nano Proteção Cerâmica. Proteja seu veículo com tecnologia de ponta e acabamento impecável." />
     <meta name="keywords" content="PPF, paint protection film, insulfilm, películas automotivas, nano proteção, proteção cerâmica, detailing automotivo" />
     <meta name="author" content="CarSoul" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#22c55e" />
 
     <meta property="og:title" content="CarSoul - Proteção Premium Para Seu Veículo" />
     <meta property="og:description" content="Serviços automotivos premium: PPF, Insulfilm e Nano Proteção Cerâmica. Proteja seu veículo com tecnologia de ponta." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:locale" content="pt_BR" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@CarSoul" />
@@ -22,6 +34,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutomotiveBusiness",
+      "name": "CarSoul",
+      "description": "Serviços automotivos premium: PPF, Insulfilm e Nano Proteção Cerâmica. Proteja seu veículo com tecnologia de ponta e acabamento impecável.",
+      "url": "https://carsoul.com",
+      "telephone": "+5531999999999",
+      "email": "contato@carsoul.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Belo Horizonte",
+        "addressRegion": "MG",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/carsoulbr/"
+      ],
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "City",
+        "name": "Belo Horizonte"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços Automotivos",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "PPF - Paint Protection Film",
+              "description": "Película de proteção de pintura que evita arranhões, riscos e pequenos impactos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Filme Solar 20%",
+              "description": "Película automotiva com 20% de transparência, oferecendo equilíbrio entre aparência sofisticada e conforto térmico"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Nano Proteção",
+              "description": "Revestimento nanotecnológico que cria uma película invisível, aumentando o brilho e facilitando a limpeza"
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </head>
 
   <body>

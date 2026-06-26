@@ -16,4 +16,21 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Otimizações de build
+    target: "esnext",
+    minify: "esbuild",
+    cssMinify: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom", "react-router-dom"],
+          ui: ["@radix-ui/react-dialog", "@radix-ui/react-sheet"],
+        },
+      },
+    },
+    // Otimização de assets
+    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 1000,
+  },
 }));

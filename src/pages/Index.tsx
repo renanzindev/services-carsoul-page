@@ -7,8 +7,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <CarCarousel />
-      <SimpleContact />
+      <main id="main-content" tabIndex={-1}>
+        <CarCarousel />
+        <SimpleContact />
+      </main>
       <SimpleFooter />
     </div>
   );

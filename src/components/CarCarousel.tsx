@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/dialog";
 import { ArrowRight, Info } from "lucide-react";
 import ppfImage from "@/assets/carPPF.png";
-import filmImage from "@/assets/hero-film.jpg";
+import filmImage from "@/assets/ppfCar.jpg";
 import nanoImage from "@/assets/hero-nano.jpg";
 import mainImage from "@/assets/hero-main.jpg";
 import Autoplay from "embla-carousel-autoplay";
@@ -179,14 +179,14 @@ const CarCarousel = () => {
   };
 
   return (
-    <section className="pt-24 pb-12 md:pb-20">
+    <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 md:pb-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+        <div className="text-center mb-8 sm:mb-12 px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">
             Proteção Premium{" "}
             <span className="text-green-500">Para Seu Veículo</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Conheça nossos serviços automotivos de alto padrão com tecnologia de
             ponta
           </p>
@@ -213,25 +213,29 @@ const CarCarousel = () => {
                 <CarouselItem key={index}>
                   <Card className="border-0 bg-transparent">
                     <CardContent className="p-0">
-                      <div className="grid md:grid-cols-2 gap-8 items-center">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                         {/* Image */}
-                        <div className="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden group">
+                        <div className="relative h-[300px] sm:h-[400px] md:h-[600px] rounded-2xl overflow-hidden group">
                           <img
                             src={service.image}
-                            alt={service.title}
+                            alt={`${service.title} - Serviço de proteção automotiva premium da CarSoul`}
                             className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
+                            loading="lazy"
+                            decoding="async"
+                            width="600"
+                            height="600"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                         </div>
 
                         {/* Content */}
-                        <div className="space-y-6 p-6 md:p-8">
+                        <div className="space-y-4 sm:space-y-6 p-4 sm:p-6 md:p-8">
                           <div>
-                            <span className="text-green-500 font-semibold text-sm tracking-wider uppercase">
+                            <span className="text-green-500 font-semibold text-xs sm:text-sm tracking-wider uppercase">
                               Serviço Premium
                             </span>
-                            <div className="flex items-center gap-3 mt-2 mb-4">
-                              <h2 className="text-3xl md:text-4xl font-bold">
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mt-2 mb-4">
+                              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                                 {service.title}
                               </h2>
                               <Dialog
@@ -258,11 +262,15 @@ const CarCarousel = () => {
                                   </DialogHeader>
                                   <div className="space-y-6 mt-4">
                                     {/* Imagem do produto */}
-                                    <div className="relative h-[300px] rounded-lg overflow-hidden">
+                                    <div className="relative h-[200px] sm:h-[300px] rounded-lg overflow-hidden">
                                       <img
                                         src={benefitImageSrc}
-                                        alt={service.title}
+                                        alt={`Benefícios do serviço ${service.title} da CarSoul`}
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
+                                        decoding="async"
+                                        width="800"
+                                        height="300"
                                       />
                                     </div>
                                     {/* Lista de benefícios */}
@@ -290,12 +298,12 @@ const CarCarousel = () => {
                                 </DialogContent>
                               </Dialog>
                             </div>
-                            <p className="text-muted-foreground text-lg leading-relaxed">
+                            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
                               {service.description}
                             </p>
                           </div>
 
-                          <div className="grid grid-cols-3 gap-4">
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                             {service.features.map((feature, idx) => (
                               <div
                                 key={idx}
@@ -324,8 +332,8 @@ const CarCarousel = () => {
               );
             })}
           </CarouselContent>
-          <CarouselPrevious className="left-4" />
-          <CarouselNext className="right-4" />
+          <CarouselPrevious className="left-2 sm:left-4 min-w-[44px] min-h-[44px]" />
+          <CarouselNext className="right-2 sm:right-4 min-w-[44px] min-h-[44px]" />
         </Carousel>
 
         {/* Indicators */}

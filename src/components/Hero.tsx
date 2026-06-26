@@ -15,14 +15,15 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent z-10" />
         <img
           src={heroImage}
-          alt="Luxury car detailing"
+          alt="CARRO DE LUXO RECEBENDO TRATAMENTO de PROTEÇÃO PREMIUM CARSOUL"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchPriority="high"
         />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-20 pt-16">
+      {/* <div className="container mx-auto px-4 relative z-20 pt-16">
         <div className="max-w-2xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Proteção Premium
@@ -54,10 +55,10 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Stats */}
-      <div className="absolute bottom-8 left-0 right-0 z-20">
+      {/* <div className="absolute bottom-8 left-0 right-0 z-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-3xl">
             <div className="text-center">
@@ -74,7 +75,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
